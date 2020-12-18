@@ -2,12 +2,14 @@ import time
 import random
 from random import randint
 import sys
+chars= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","$","%","&","(",")","*",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","0","1","2","3","4","5","6","7","8","9"]
 def massprint():
   againagain = int(times)
   even=0
   odd=1
   consec=0
   rand=0
+  
   while againagain >= 0:
     time.sleep(float(speed))
     againagain -= 1
@@ -22,13 +24,18 @@ def massprint():
       consec=consec+1
     elif eocr=="r":
       print(random.randint(int(randlowcap),int(randhighcap)),flush=True, end=" ")
+    elif eocr=="p":
+      password=random.sample(chars,letters)
+      divider = ""
+      password = divider.join(password) 
+      print(password)
     else:
       print("Unrecognized. Type either e, o or c or r")
 
   if againagain<=1:
     print(" \n")
-print("Do you want to print even numbers, odd numbers \n, consecutive or random numbers? ")
-eocr=input("e/o/c/r ")
+print("Do you want to print even numbers,odd numbers,\nconsecutive,random numbers or password? ")
+eocr=input("e/o/c/r/p ")
 time.sleep(1)
 times=input("And how many times should it do this? ")
 time.sleep(1)
@@ -78,5 +85,17 @@ elif eocr=="r":
     print("Done!")
   else:
     exit()
+elif eocr=="p":
+  letters=int(input("Alright, How many characters should the password have? (no higher than 88) "))
+  time.sleep(1)
+  print("Okay, It will print",times,"passwords,\nEach with",letters,"characters each")
+  varcontinue=input("Is this okay? (y/n) ")
+  if varcontinue=="y":
+    print(" ")
+    times=int(times)-1
+    times=str(times)
+    massprint()
+    time.sleep(1)
+    print("Done!")
 else:
   exit()
