@@ -41,3 +41,13 @@ The example below compares printing 100 numbers at 0.02 compared to 1
 ![Speed Comparison Part 1](https://i.imgur.com/UJUzBYG.gif) *A string every second ^*
 ![Speed Comparison Part 2](https://i.imgur.com/DaWzblC.gif) *A string every 0.02 seconds ^*
 
+As you can see, changing the the time between each string is important.
+
+Next up then, it will ask you what to put inbetween each string. 
+Below is an example of two different ones.
+
+![Inbetween Comparison Part1](https://i.imgur.com/heykgJU.png) ![Inbetween Comparison Part 2](https://i.imgur.com/PQsATPn.png)
+
+Shown above is a comparison of spaces and commas inbetween, However, you can choose much more than that.
+
+You can choose between [Spaces](https://i.imgur.com/heykgJU.png), [Commas](https://i.imgur.com/PQsATPn.png), [Newlines](https://i.imgur.com/m5Ap9xN.png), [Or Litterally any other string](https://i.imgur.com/3ATHUY0.png)
