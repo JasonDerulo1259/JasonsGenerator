@@ -19,4 +19,5 @@ Next, It will ask you how many times/strings to print. [image here](https://i.im
 Here, Just input any number you want, and it will print that many strings of It
 For example. If you chose consecutive, And put `25`, 
 It would print something similar to this **depending on the settings chosen after this point**
+
 ![Example Of Consecutive Output](https://i.imgur.com/dlFIE0t.png)
