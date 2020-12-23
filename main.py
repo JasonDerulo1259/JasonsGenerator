@@ -1,6 +1,7 @@
 import time
 import random
 from random import randint
+from random import choices
 import sys
 chars= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","$","%","&","(",")","*",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","0","1","2","3","4","5","6","7","8","9"]
 def massprint():
@@ -14,35 +15,44 @@ def massprint():
     time.sleep(float(speed))
     againagain -= 1
     if eocr=="e":
-      print(even,flush=True, end=" ")
+      print(even,flush=True, end=inbetween)
       even=even+2
     elif eocr=="o":
-      print(odd,flush=True, end=" ")
+      print(odd,flush=True, end=inbetween)
       odd=odd+2
     elif eocr=="c":
-      print(consec,flush=True, end=" ")
+      print(consec,flush=True, end=inbetween)
       consec=consec+1
     elif eocr=="r":
-      print(random.randint(int(randlowcap),int(randhighcap)),flush=True, end=" ")
+      print(random.randint(int(randlowcap),int(randhighcap)),flush=True, end=inbetween)
     elif eocr=="p":
       password=random.sample(chars,letters)
       divider = ""
       password = divider.join(password) 
-      print(password)
+      print(password,flush=True, end=inbetween)
+    elif eocr=="pr":
+      password=choices(chars, k=letters)
+      divider = ""
+      password = divider.join(password) 
+      print(password,flush=True, end=inbetween)
     else:
       print("Unrecognized. Type either e, o or c or r")
 
   if againagain<=1:
     print(" \n")
-print("Do you want to print even numbers,odd numbers,\nconsecutive,random numbers or password? ")
-eocr=input("e/o/c/r/p ")
+print("even, odd, consecutive, random, password or password-repeat ")
+eocr=input("e/o/c/r/p/pr ")
 time.sleep(1)
-times=input("And how many times should it do this? ")
+times=input("How many times/strings? ")
 againagain=int(times)
 time.sleep(1)
-speed=input("Okay, And What speed should it print the numbers, \nAnswer in seconds. (0.02 Is Default) ")
+speed=input("What speed should it print, \nAnswer in seconds. (0.02 Is Normal-ish speed) ")
 time.sleep(1)
-
+inbetween=input("What should be inbetween each string (eg: space, comma, newline (/n).). \nAnswer with the string inbetween, Not the name of it \n(write ' ' , not 'space') ")
+if inbetween=="/n":
+  inbetween="\n"
+else:
+  print("")
 if eocr=="e":
   print("Alright, The final number will be",str(againagain * 2))
   varcontinue=input("Is this okay? (y/n) ")
@@ -89,7 +99,19 @@ elif eocr=="r":
 elif eocr=="p":
   letters=int(input("Alright, How many characters should the password have? (no higher than 88) "))
   time.sleep(1)
-  print("Okay, It will print",times,"passwords,\nEach with",letters,"characters each")
+  print("Okay, It will print",times,"passwords,\nEach with",letters," NON-REPEATING characters each")
+  varcontinue=input("Is this okay? (y/n) ")
+  if varcontinue=="y":
+    print(" ")
+    times=int(times)-1
+    times=str(times)
+    massprint()
+    time.sleep(1)
+    print("Done!")
+elif eocr=="pr":
+  letters=int(input("Alright, How many characters should the password have? "))
+  time.sleep(1)
+  print("Okay, It will print",times,"passwords,\nEach with",letters," REPEATING characters each")
   varcontinue=input("Is this okay? (y/n) ")
   if varcontinue=="y":
     print(" ")
