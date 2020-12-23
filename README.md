@@ -8,6 +8,7 @@ Then, after [downloading the newest release](https://github.com/JasonDerulo1259/
 ##Usage
 The first thing you see when you open the python program (assuming it was installed correctly) is something similar to this
 (screenshot taken on version 0.3)
+
 ![Screenshot of first output from program](https://i.imgur.com/B5FHjGi.png)
 
 This is where you can choose what to output. The current options are Even numbers, Odd numbers, Consecutive numbers, Random numbers, non repeating password and repeating password.
@@ -16,5 +17,6 @@ e=Even, o=Odd, c=Consecutive, r=Random, p=Password (without repeating), pr=Passw
 
 Next, It will ask you how many times/strings to print. [image here](https://i.imgur.com/rIYxWV5.png)
 Here, Just input any number you want, and it will print that many strings of It
-For example. If you chose consecutive, And put `25`, It would print something similar to this **depending on the settings chosen after this point**
+For example. If you chose consecutive, And put `25`, 
+It would print something similar to this **depending on the settings chosen after this point**
 ![Example Of Consecutive Output](https://i.imgur.com/dlFIE0t.png)
