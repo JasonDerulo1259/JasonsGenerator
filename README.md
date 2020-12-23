@@ -38,6 +38,6 @@ This is where you choose the time between each string.
 
 The example below compares printing 100 numbers at 0.02 compared to 1
 
-![Speed Comparison Part 1](https://i.imgur.com/UJUzBYG.gif) string every 1 second
-![Speed Comparison Part 2](https://i.imgur.com/DaWzblC.gif) string every 0.02 second
+![Speed Comparison Part 1](https://i.imgur.com/UJUzBYG.gif) *A string every second ^*
+![Speed Comparison Part 2](https://i.imgur.com/DaWzblC.gif) *A string every 0.02 seconds ^*
 
