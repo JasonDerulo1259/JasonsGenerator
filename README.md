@@ -86,6 +86,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Contact
+
+Feel free to contact me on discord (although my tag changes a bit.) Or email me here : 
+
 ## License
 
 MIT License
