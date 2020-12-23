@@ -1,11 +1,11 @@
 # NumberPrinter-RandEvenConsecOdd
 A Basic Number Printer, Useful for generating passwords, keys, sequences of numbers, and more.
 
-##Installation
+## Installation
 [Download and setup python](https://www.python.org/downloads/) if you haven't already.
 Then, after [downloading the newest release](https://github.com/JasonDerulo1259/NumberPrinter-RandEvenConsecOdd/releases) of the number printer, follow the instructions on the program. (explained below)
 
-##Usage
+## Usage
 The first thing you see when you open the python program (assuming it was installed correctly) is something similar to this
 (screenshot taken on version 0.3)
 
