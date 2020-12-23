@@ -51,3 +51,61 @@ Below is an example of two different ones.
 Shown above is a comparison of spaces and commas inbetween, However, you can choose much more than that.
 
 You can choose between [Spaces](https://i.imgur.com/heykgJU.png), [Commas](https://i.imgur.com/PQsATPn.png), [Newlines](https://i.imgur.com/m5Ap9xN.png), [Or Litterally any other string](https://i.imgur.com/3ATHUY0.png)
+
+After this, it will tell you what your final number will be. (Unless random or password)
+
+It will also ask you to confirm it with y/n. If you type `y`, it will continue, If you type `n`, it will exit.
+
+### Situation Specific Usage
+###### Random Specific Outputs:
+
+There are some options in the program that will elicit some extra options
+
+For example, If you choose it to output random numbers at the beggining, it will ask what the highest and lowest numbers should be
+
+![Example of high/low cap for random](https://i.imgur.com/0nKZkSG.png)
+
+It will also output a slightly different confirmation message
+
+![Example of random confirmation](https://i.imgur.com/Rzt26jh.png)
+
+###### Password Specific Outputs:
+
+When generating passwords, It will ask how many letters it will have, With the `"Password (without repeating)"` option showing an extra 'max letters' message
+
+![Password Message 1](https://i.imgur.com/rSlhghb.png)
+![Password Message 2](https://i.imgur.com/JitmXBs.png)
+
+Finally, It also shows a slightly different confirmation message for Each.
+
+![Password Confirmation 1](https://i.imgur.com/S2HBZw3.png)
+![Password Confirmation 2](https://i.imgur.com/XCfEBll.png)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
