@@ -29,3 +29,15 @@ It would print something similar to this **depending on the settings chosen afte
 
 ![Example Of Consecutive Output](https://i.imgur.com/dlFIE0t.png)
 
+Anyway, After it asks you what the amount you want to print out is, It will then show output another option, that says [this](https://i.imgur.com/nWjp7WY.png)
+
+`What speed should it print`
+And it will go on to tell you to answer in seconds. And that 0.02 is a "Normal-ish" Speed.
+
+This is where you choose the time between each string. 
+
+The example below compares printing 100 numbers at 0.02 compared to 1
+
+![Speed Comparison Part 1](https://i.imgur.com/UJUzBYG.gif)
+![Speed Comparison Part 2](https://i.imgur.com/DaWzblC.gif)
+
