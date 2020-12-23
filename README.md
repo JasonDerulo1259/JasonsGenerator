@@ -88,7 +88,7 @@ Please make sure to update tests as appropriate.
 
 ## Contact
 
-Feel free to contact me on discord (although my tag changes a bit.) Or email me here : molopolo1259@gmail.com
+Feel free to contact me on discord - 'ScrotumBasher#4316' - (although my tag changes a bit.) Or email me here : molopolo1259@gmail.com
 
 ## License
 
