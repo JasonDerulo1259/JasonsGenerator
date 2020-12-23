@@ -38,10 +38,11 @@ print("Do you want to print even numbers,odd numbers,\nconsecutive,random number
 eocr=input("e/o/c/r/p ")
 time.sleep(1)
 times=input("And how many times should it do this? ")
+againagain=int(times)
 time.sleep(1)
 speed=input("Okay, And What speed should it print the numbers, \nAnswer in seconds. (0.02 Is Default) ")
 time.sleep(1)
-againagain = int(times)
+
 if eocr=="e":
   print("Alright, The final number will be",str(againagain * 2))
   varcontinue=input("Is this okay? (y/n) ")
@@ -51,7 +52,7 @@ if eocr=="e":
     time.sleep(1)
     print("Done!")
   else:
-    exit()
+    print("\n")
 elif eocr=="o":
   print("Alright, The final number will be",str(againagain * 2+1))
   varcontinue=input("Is this okay? (y/n) ")
@@ -61,7 +62,7 @@ elif eocr=="o":
     time.sleep(1)
     print("Done!")
   else:
-    exit()
+    print("\n")
 elif eocr=="c":
   print("Alright, The final number will be",str(againagain))
   varcontinue=input("Is this okay? (y/n) ")
@@ -84,7 +85,7 @@ elif eocr=="r":
     time.sleep(1)
     print("Done!")
   else:
-    exit()
+    print("\n")
 elif eocr=="p":
   letters=int(input("Alright, How many characters should the password have? (no higher than 88) "))
   time.sleep(1)
@@ -98,4 +99,7 @@ elif eocr=="p":
     time.sleep(1)
     print("Done!")
 else:
-  exit()
+  print("Restart and input 'e' or 'o' or 'c' or 'r' or 'p'")
+print("Press the Enter key to exit")
+exit1=input(" ")
+exit()
