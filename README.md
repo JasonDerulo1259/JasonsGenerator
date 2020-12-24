@@ -1,4 +1,4 @@
-# NumberPrinter-RandEvenConsecOdd
+# Jason's Generator - Simple Open-source Generator
 A Basic Number Printer, Useful for generating passwords, keys, sequences of numbers, and more.
 
 ## Installation
