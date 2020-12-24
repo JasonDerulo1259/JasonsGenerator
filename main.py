@@ -3,6 +3,12 @@ import random
 from random import randint
 from random import choices
 import sys
+import os
+import datetime
+from datetime import datetime
+now = datetime.now()
+timestamp = now.strftime("Created %d %b, %H:%M \n")
+filetimestamp=now.strftime("%d-%m-%y_%H:%M:%S")
 chars= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","$","%","&","(",")","*",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","0","1","2","3","4","5","6","7","8","9"]
 def massprint():
   againagain = int(times)
@@ -10,30 +16,56 @@ def massprint():
   odd=1
   consec=0
   rand=0
-  
+  import os
+  if os.path.exists("output_"+filetimestamp+".txt"):
+    os.remove("output_"+filetimestamp+".txt")
+  else:
+    print("",flush=True, end="")
+  time.sleep(0.01)
+  f=open("output_"+filetimestamp+".txt","w")
+  f.write(timestamp)
+  f.close()
   while againagain >= 0:
     time.sleep(float(speed))
     againagain -= 1
     if eocr=="e":
+      f=open("output_"+filetimestamp+".txt","a")
+      print(even,flush=True, end=inbetween, file=f)
+      f.close()
       print(even,flush=True, end=inbetween)
       even=even+2
     elif eocr=="o":
+      f=open("output_"+filetimestamp+".txt","a")
+      print(odd,flush=True, end=inbetween, file=f)
+      f.close()
       print(odd,flush=True, end=inbetween)
       odd=odd+2
     elif eocr=="c":
+      f=open("output_"+filetimestamp+".txt","a")
+      print(consec,flush=True, end=inbetween, file=f)
+      f.close()
       print(consec,flush=True, end=inbetween)
       consec=consec+1
     elif eocr=="r":
+      f=open("output_"+filetimestamp+".txt","a")
+      print(random.randint(int(randlowcap),int(randhighcap)),flush=True, end=inbetween, file=f)
+      f.close()
       print(random.randint(int(randlowcap),int(randhighcap)),flush=True, end=inbetween)
     elif eocr=="p":
       password=random.sample(chars,letters)
       divider = ""
       password = divider.join(password) 
+      f=open("output_"+filetimestamp+".txt","a")
+      print(password,flush=True, end=inbetween, file=f)
+      f.close()
       print(password,flush=True, end=inbetween)
     elif eocr=="pr":
       password=choices(chars, k=letters)
       divider = ""
       password = divider.join(password) 
+      f=open("output_"+filetimestamp+".txt","a")
+      print(password,flush=True, end=inbetween, file=f)
+      f.close()
       print(password,flush=True, end=inbetween)
     else:
       print("Unrecognized. Type either e, o or c or r")
@@ -42,12 +74,12 @@ def massprint():
     print(" \n")
 print("even, odd, consecutive, random, password or password-repeat ")
 eocr=input("e/o/c/r/p/pr ")
-time.sleep(1)
+time.sleep(0.5)
 times=input("How many times/strings? ")
 againagain=int(times)
-time.sleep(1)
+time.sleep(0.5)
 speed=input("What speed should it print, \nAnswer in seconds. (0.02 Is Normal-ish speed) ")
-time.sleep(1)
+time.sleep(0.5)
 inbetween=input("What should be inbetween each string (eg: space, comma, newline (/n).). \nAnswer with the string inbetween, Not the name of it \n(write ' ' , not 'space') ")
 if inbetween=="/n":
   inbetween="\n"
@@ -82,11 +114,11 @@ elif eocr=="c":
     time.sleep(1)
     print("Done!")
 elif eocr=="r":
-  time.sleep(1)
+  time.sleep(0.5)
   randhighcap=input("And what do you want the highest random number to be? ")
-  time.sleep(1)
+  time.sleep(0.5)
   randlowcap=input("And what do you want the lowest random number to be? ")
-  time.sleep(1)
+  time.sleep(0.5)
   print("Alright, It will print",str(againagain),"random numbers \nWith a high cap of",randhighcap,"\nAnd a low cap of",randlowcap)
   varcontinue=input("Is this okay? (y/n) ")
   if varcontinue=="y":
@@ -98,7 +130,7 @@ elif eocr=="r":
     print("\n")
 elif eocr=="p":
   letters=int(input("Alright, How many characters should the password have? (no higher than 88) "))
-  time.sleep(1)
+  time.sleep(0.5)
   print("Okay, It will print",times,"passwords,\nEach with",letters," NON-REPEATING characters each")
   varcontinue=input("Is this okay? (y/n) ")
   if varcontinue=="y":
@@ -110,7 +142,7 @@ elif eocr=="p":
     print("Done!")
 elif eocr=="pr":
   letters=int(input("Alright, How many characters should the password have? "))
-  time.sleep(1)
+  time.sleep(0.5)
   print("Okay, It will print",times,"passwords,\nEach with",letters," REPEATING characters each")
   varcontinue=input("Is this okay? (y/n) ")
   if varcontinue=="y":
