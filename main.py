@@ -8,7 +8,7 @@ import datetime
 from datetime import datetime
 now = datetime.now()
 timestamp = now.strftime("Created %d %b, %H:%M \n")
-filetimestamp=now.strftime("%d-%m-%y_%H:%M:%S")
+filetimestamp=now.strftime("%d.%m.%y_%H-%M-%S")
 chars= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","$","%","&","(",")","*",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","0","1","2","3","4","5","6","7","8","9"]
 def massprint():
   againagain = int(times)
@@ -21,52 +21,54 @@ def massprint():
     os.remove("output_"+filetimestamp+".txt")
   else:
     print("",flush=True, end="")
-  time.sleep(0.01)
-  f=open("output_"+filetimestamp+".txt","w")
+  fixvar1="output_"+filetimestamp+".txt"
+  time.sleep(0.1)
+  f=open(fixvar1,"w")
   f.write(timestamp)
   f.close()
+  time.sleep(1)
   while againagain >= 0:
     time.sleep(float(speed))
     againagain -= 1
     if eocr=="e":
-      f=open("output_"+filetimestamp+".txt","a")
+      f=open(fixvar1,"a")
       print(even,flush=True, end=inbetween, file=f)
-      f.close()
       print(even,flush=True, end=inbetween)
+      f.close()
       even=even+2
     elif eocr=="o":
-      f=open("output_"+filetimestamp+".txt","a")
+      f=open(fixvar1,"a")
       print(odd,flush=True, end=inbetween, file=f)
-      f.close()
       print(odd,flush=True, end=inbetween)
+      f.close()
       odd=odd+2
     elif eocr=="c":
-      f=open("output_"+filetimestamp+".txt","a")
+      f=open(fixvar1,"a")
       print(consec,flush=True, end=inbetween, file=f)
-      f.close()
       print(consec,flush=True, end=inbetween)
+      f.close()
       consec=consec+1
     elif eocr=="r":
-      f=open("output_"+filetimestamp+".txt","a")
+      f=open(fixvar1,"a")
       print(random.randint(int(randlowcap),int(randhighcap)),flush=True, end=inbetween, file=f)
-      f.close()
       print(random.randint(int(randlowcap),int(randhighcap)),flush=True, end=inbetween)
+      f.close()
     elif eocr=="p":
       password=random.sample(chars,letters)
       divider = ""
       password = divider.join(password) 
-      f=open("output_"+filetimestamp+".txt","a")
+      f=open(fixvar1,"a")
       print(password,flush=True, end=inbetween, file=f)
-      f.close()
       print(password,flush=True, end=inbetween)
+      f.close()
     elif eocr=="pr":
       password=choices(chars, k=letters)
       divider = ""
       password = divider.join(password) 
-      f=open("output_"+filetimestamp+".txt","a")
+      f=open(fixvar1,"a")
       print(password,flush=True, end=inbetween, file=f)
-      f.close()
       print(password,flush=True, end=inbetween)
+      f.close()
     else:
       print("Unrecognized. Type either e, o or c or r")
 
