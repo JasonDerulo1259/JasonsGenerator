@@ -4,13 +4,16 @@ from random import randint
 from random import choices
 import sys
 import os
+import math
 import datetime
 from datetime import datetime
 now = datetime.now()
 timestamp = now.strftime("Created %d %b, %H:%M \n")
 filetimestamp=now.strftime("%d.%m.%y_%H-%M-%S")
 chars= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","$","%","&","(",")","*",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","0","1","2","3","4","5","6","7","8","9"]
+
 def massprint():
+  random_float = random.uniform(int(randlowcap), int(randhighcap))
   againagain = int(times)
   even=0
   odd=1
@@ -31,17 +34,32 @@ def massprint():
     time.sleep(float(speed))
     againagain -= 1
     if eocr=="e":
-      f=open(fixvar1,"a")
-      print(even,flush=True, end=inbetween, file=f)
-      print(even,flush=True, end=inbetween)
-      f.close()
-      even=even+2
+      if conran=="c":
+        f=open(fixvar1,"a")
+        print(even,flush=True, end=inbetween, file=f)
+        print(even,flush=True, end=inbetween)
+        f.close()
+        even=even+2
+      elif conran=="r":
+        random_float = random.uniform(int(randlowcap), int(randhighcap))
+        roundedeven=math.ceil(random_float / 2.) * 2
+        f=open(fixvar1,"a")
+        print(roundedeven,flush=True, end=inbetween, file=f)
+        print(roundedeven,flush=True, end=inbetween)
+        f.close()
     elif eocr=="o":
-      f=open(fixvar1,"a")
-      print(odd,flush=True, end=inbetween, file=f)
-      print(odd,flush=True, end=inbetween)
-      f.close()
-      odd=odd+2
+      if conran=="c":
+        f=open(fixvar1,"a")
+        print(odd,flush=True, end=inbetween, file=f)
+        print(odd,flush=True, end=inbetween)
+        f.close()
+        odd=odd+2
+      elif conran=="r":
+        random_float = random.uniform(int(randlowcap), int(randhighcap))
+        roundedodd=math.ceil(random_float / 2.) * 2+1
+        f=open(fixvar1,"a")
+        print(roundedodd,flush=True, end=inbetween, file=f)
+        print(roundedodd,flush=True, end=inbetween)
     elif eocr=="c":
       f=open(fixvar1,"a")
       print(consec,flush=True, end=inbetween, file=f)
@@ -88,7 +106,20 @@ if inbetween=="/n":
 else:
   print("")
 if eocr=="e":
-  print("Alright, The final number will be",str(againagain * 2))
+  conran=input("Should It Be consecutive, or random?\n c/r ")
+  if conran=="c":
+    print("Consecutive Selected.")
+    time.sleep(0.5)
+    print("Alright, The final number will be",str(againagain * 2))
+  elif conran=="r":
+    print("Random Selected.")
+    time.sleep(0.5)
+    randhighcap=input("And what do you want the highest random number to be? ")
+    time.sleep(0.5)
+    randlowcap=input("And what do you want the lowest random number to be? ")
+    time.sleep(0.5)
+    print("It will print" ,times, "random, even numbers.\nWith a high cap of",randhighcap,"\nAnd A low cap of",randlowcap,". ")
+    time.sleep(0.5)
   varcontinue=input("Is this okay? (y/n) ")
   if varcontinue=="y":
     print(" ")
@@ -98,7 +129,24 @@ if eocr=="e":
   else:
     print("\n")
 elif eocr=="o":
-  print("Alright, The final number will be",str(againagain * 2+1))
+  conran=input("Should It Be consecutive, or random?\n c/r ")
+  if conran=="c":
+    print("Consecutive Selected.")
+    time.sleep(0.5)
+    print("Alright, The final number will be",str(againagain * 2+1))
+  elif conran=="r":
+    print("Random Selected.")
+    time.sleep(0.5)
+    randhighcap=input("And what do you want the highest random number to be? ")
+    time.sleep(0.5)
+    randlowcap=input("And what do you want the lowest random number to be? ")
+    time.sleep(0.5)
+    print("It will print" ,times, "random, odd numbers.\nWith a high cap of",randhighcap,"\nAnd A low cap of",randlowcap,". ")
+    time.sleep(0.5)
+  else:
+    print("Error. Invalid response.")
+    time.sleep(1)
+    exit()
   varcontinue=input("Is this okay? (y/n) ")
   if varcontinue=="y":
     print(" ")
