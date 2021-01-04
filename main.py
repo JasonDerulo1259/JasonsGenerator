@@ -13,10 +13,11 @@ filetimestamp=now.strftime("%d.%m.%y_%H-%M-%S")
 chars= ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","$","%","&","(",")","*",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","0","1","2","3","4","5","6","7","8","9"]
 
 def massprint():
+  startat=int(startatstr)
   againagain = int(times)
-  even=0
-  odd=1
-  consec=0
+  even=startat
+  odd=startat+1
+  consec=startat
   rand=0
   import os
   if os.path.exists("output_"+filetimestamp+".txt"):
@@ -109,7 +110,9 @@ if eocr=="e":
   if conran=="c":
     print("Consecutive Selected.")
     time.sleep(0.5)
-    print("Alright, The final number will be",str(againagain * 2))
+    startatstr=input("What number should it start at? ")
+    time.sleep(0.5)
+    print("Alright, The final number will be",str((againagain * 2)+int(startatstr)))
   elif conran=="r":
     print("Random Selected.")
     time.sleep(0.5)
@@ -132,7 +135,9 @@ elif eocr=="o":
   if conran=="c":
     print("Consecutive Selected.")
     time.sleep(0.5)
-    print("Alright, The final number will be",str(againagain * 2+1))
+    time.sleep(0.5)
+    startatstr=input("What number should it start at? ")
+    print("Alright, The final number will be",str((againagain * 2+1)+int(startatstr)))
   elif conran=="r":
     print("Random Selected.")
     time.sleep(0.5)
@@ -155,7 +160,10 @@ elif eocr=="o":
   else:
     print("\n")
 elif eocr=="c":
-  print("Alright, The final number will be",str(againagain))
+  time.sleep(0.5)
+  startatstr=input("What number should it start at? ")
+  time.sleep(0.5)
+  print("Alright, The final number will be",str((againagain)+int(startatstr)))
   varcontinue=input("Is this okay? (y/n) ")
   if varcontinue=="y":
     print(" ")
