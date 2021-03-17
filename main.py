@@ -7,8 +7,6 @@ import os
 import math
 import datetime
 from datetime import datetime
-import PySimpleGUI as sg
-sg.Window(title="Hello World", layout=[[]], margins=(100, 50)).read()
 now = datetime.now()
 timestamp = now.strftime("Created %d %b, %H:%M \n")
 filetimestamp=now.strftime("%d.%m.%y_%H-%M-%S")
