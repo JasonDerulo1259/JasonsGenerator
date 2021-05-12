@@ -94,7 +94,7 @@ Feel free to contact me on discord - 'ScrotumBasher#4316' - (although my tag cha
 
 MIT License
 
-Copyright (c) 2020/2021 Michael Gordon
+Copyright (c) 2020/2021 JasonDerulo1259
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
